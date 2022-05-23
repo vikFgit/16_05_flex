@@ -1,20 +1,75 @@
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* html, body{
+  min-height: 100vh;
+  если задать min-width появится горизонтальный скрол, в данном случае задавать не обязательно
+} */
+:root{
+  font-family: sans-serif;
+  font-size: 18px;
+}
+a{
+  text-decoration: none;
 }
 .container{
-  border: 3px solid teal;
-}
-.item{
- width: 50px;
- height: 50px;
- border: 5px solid teal;
- background-color: #fff;
- text-align: center;
- font-size: 1.5em;
-}
-.flex-parent{
-  min-height: 90vh;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
+  /* можем привязать футтер */
+  flex-flow: column nowrap;
+  /* направление+перенос */
+  max-width: 1000px;
+  min-height: 100vh;
+  /* обязательно указывать */
+  margin: auto;
+  /* отталкиваем футтер */
 }
+.header{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  /* поперечная ось */
+  background-color: rgb(133, 133, 133);
+}
+.logo{
+  font-size: 2.5em;
+}
+.list{
+  list-style: none;
+}
+.list-item{
+display: inline-block;
+}
+.link{
+  display: block;
+  padding: 0.7em;
+}
+.main{
+  flex-grow: 1;
+  /* растянуть на все свободное место, если контента мало на странице чтобы футтер не оказался сразу под контентом, а был на своем месте  */
+  padding: 10px;
+  background-color: rgb(226, 224, 224);
+  text-align: center;
+}
+.wrapper{
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  /* элементы свыравниваются по верху */
+}
+.main-article{
+  padding: 10px;
+  border: 3px solid pink;
+}
+.main-article+.main-article{
+  margin-top: 1em;
+}
+.footer{
+  padding: 10px;
+  background-color: pink;
+  text-align: center;
+}
+
+
