@@ -67,6 +67,8 @@ display: inline-block;
   margin-top: 1em;
 }
 .footer{
+  margin-top: auto;
+  /* вариант отбить футтер вниз */
   padding: 10px;
   background-color: pink;
   text-align: center;
